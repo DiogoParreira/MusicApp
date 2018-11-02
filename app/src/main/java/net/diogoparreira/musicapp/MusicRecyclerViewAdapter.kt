@@ -33,6 +33,10 @@ class MusicRecyclerViewAdapter(var musicList: List<MusicEntryData>) : RecyclerVi
 
         holder.name.setText(music.name)
         holder.artist.text = MusicApplication.instance.getString(R.string.artist, music.artist.name)
+        GlideApp.with(MusicApplication.instance.applicationContext)
+            .load(music.image[1].text)
+            .centerCrop()
+            .into(holder.artistImage)
     }
 
     override fun getItemCount(): Int {
