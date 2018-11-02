@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App de Música</string>
+    <string name="artist">Artista: %s</string>
+    <string name="artist_image_description">Imagem do artista</string>
+</resources>
