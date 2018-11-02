@@ -16,34 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
-        musicList.add(musicList.size, MusicEntryData("Test Name" + (musicList.size + 1), ArtistData("Artist Name")))
 
         adapter = MusicRecyclerViewAdapter(musicList)
         recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
@@ -53,6 +25,13 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
 
+        MusicApplication.instance.getMusicList("Portugal", object: MusicListCallback {
+            override fun onReceiveList(musicList: List<MusicEntryData>) {
+                adapter.musicList = musicList
+                adapter.notifyDataSetChanged()
+            }
+
+        })
 
     }
 }
