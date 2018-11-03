@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MusicApp</string>
+    <string name="app_name">Music App</string>
+    <string name="artist">Artist: %s</string>
+    <string name="artist_image_description">Artist image</string>
+    <string name="api_key" translatable="false">ca2c5c573cd92f8df1a925be53f7c4c1</string>
+    <string name="title_location_permission">Location permission</string>
+    <string name="text_location_permission">This app requires location permission to work as expected.</string>
+    <string name="ok">OK</string>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App de Música</string>
+    <string name="artist">Artista: %s</string>
+    <string name="artist_image_description">Imagem do artista</string>
+    <string name="title_location_permission">Permissão de localização</string>
+    <string name="text_location_permission">Esta aplicação precisa de acesso à localização para funcionar da maneira esperada.</string>
+    <string name="ok">OK</string>
+</resources>
